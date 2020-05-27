@@ -1,0 +1,65 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera.fx: 348.5 # 697.0
+Camera.fy: 347.0 # 694.0
+Camera.cx: 480.0 #959.5
+Camera.cy: 302.0 #603.5
+
+Camera.k1: -0.0488316
+Camera.k2: 0.000298406
+Camera.p1: -0.00591118
+Camera.p2: 0.00193258
+
+# Camera frames per second 
+Camera.fps: 25.0
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image 800
+ORBextractor.nFeatures: 2000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 1.44      
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid  4
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast 15 5                  
+ORBextractor.iniThFAST: 15
+ORBextractor.minThFAST: 5
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.1 #0.05
+Viewer.KeyFrameLineWidth: 1
+Viewer.GraphLineWidth: 1 #0.9 
+Viewer.PointSize: 2
+Viewer.CameraSize: 0.15 #0.08
+Viewer.CameraLineWidth: 2 #3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -10 #-0.7
+Viewer.ViewpointZ: 0.1 #-1.8
+Viewer.ViewpointF: 2000 #500
+
+
+#--------------------------------------------------------------------------------------------
+# Map Saving
+#--------------------------------------------------------------------------------------------
+# Map is saved with map_name after finishing SLAM. 
+# If the file with the same name already exists, only localization is performed.
+# Ignored when processing mode is 3 (data collection)
+#map_name : "1.bin"
